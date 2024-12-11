@@ -9,10 +9,13 @@ def derivative(x, a):
     return sum
 
 while True:
-    x = int(input())  # 讀取 x 的值
-    A = list(map(int, input().split(" ")))  # 讀取係數列表 A
+    try:
+        x = int(input())  # 讀取 x 的值
+        A = list(map(int, input().split(" ")))  # 讀取係數列表 A
 
-    # 調用 derivative 函數計算多項式在 x 點的導數
-    result = derivative(x, A)
+        # 調用 derivative 函數計算多項式在 x 點的導數
+        result = derivative(x, A)
 
-    print(result)  # 輸出計算結果
+        print(result)  # 輸出計算結果
+    except EOFError:
+        break
